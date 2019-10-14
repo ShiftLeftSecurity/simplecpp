@@ -2495,8 +2495,7 @@ static bool preprocessToken(simplecpp::TokenList &output, const simplecpp::Token
         }
         output.takeTokens(value);
     } else {
-        if (!tok->comment)
-            output.push_back(new simplecpp::Token(*tok));
+        output.push_back(new simplecpp::Token(*tok));
         *tok1 = tok->next;
     }
     return true;
